@@ -1,0 +1,81 @@
+/* @theme itba */
+
+@import 'default';
+
+:root {
+  --primary-rgb: 0, 86, 138;
+  --primary: rgb(var(--primary-rgb));
+}
+
+section {
+  background-color: #fff;
+  color: #000;
+  background-image: url('images/logo-itba.png');
+  background-repeat: no-repeat;
+  background-position: right 40px top 40px;
+  background-size: 8%;
+}
+
+section h1,
+section h2,
+section a,
+section footer,
+section::after {
+  color: var(--primary);
+}
+
+section.blank {
+    background-image: none;
+}
+
+section.lead h1 {
+    font-size: 2.5em;
+    padding-bottom: 0;
+}
+
+section.lead h2 {
+    font-size: 1.5em;
+    opacity: 0.75;
+}
+
+section p, li {
+  margin-bottom: 0.75em;
+}
+
+section li {
+  padding-left: 0.5em;
+}
+
+section li li {
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+
+section li::marker {
+  color: var(--primary);
+}
+
+section blockquote {
+  color: var(--primary);
+  padding: 0.5em 1em;
+  background-color: rgba(var(--primary-rgb), 0.05);
+  border-left: none;
+}
+
+.container {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+}
+.col {
+  flex: 1;
+}
+
+.muted {
+  opacity: 0.6;
+}
+
+/* Add "Page" prefix and total page number */
+section::after {
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+}

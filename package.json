@@ -1,0 +1,25 @@
+{
+  "name": "devops",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "marp --server",
+    "build": "marp",
+    "watch": "marp -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Federico Bond",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "@marp-team/marp-cli": "^4.1.2",
+    "markdown-it-container": "^4.0.0"
+  },
+  "marp": {
+    "allowLocalFiles": true,
+    "inputDir": "./slides",
+    "output": "./public",
+    "themeSet": "./themes"
+  }
+}
