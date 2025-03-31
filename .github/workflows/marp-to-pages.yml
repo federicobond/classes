@@ -1,0 +1,36 @@
+name: marp-to-pages
+concurrency: marp-to-pages
+
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      pages: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Marp Build
+        uses: docker://marpteam/marp-cli:latest
+        with:
+          args: --input-dir slides --output public
+        env:
+          MARP_USER: root:root
+      - name: Copy images
+        run: |
+          mkdir -p public/devops/images
+          cp -r slides/devops/images/* public/devops/images/
+          mkdir -p public/ingsoft/images
+          cp -r slides/ingsoft/images/* public/ingsoft/images/
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "public"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
