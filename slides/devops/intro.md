@@ -18,12 +18,12 @@ paginate: true
 # Clase 1: Fundamentos y Orígenes de DevOps
 _Practicas Modernas de Desarrollo y Operaciones_
 
----
-
+<!--
 ## Objetivos de la Clase
 - Comprender el contexto histórico del surgimiento de DevOps
 - Introducir los principios fundamentales de DevOps
 - Relacionar DevOps con movimientos como Lean y Agile
+-->
 
 ---
 
@@ -44,7 +44,7 @@ Tradicionalmente, el equipo de desarrollo busca innovar y añadir nuevas funcion
 
 ---
 
-![bg fit 70%](../images/Devops-toolchain.svg)
+![bg fit 70%](images/Devops-toolchain.svg)
 
 ---
 
@@ -284,14 +284,14 @@ Las métricas de la izquierda miden la eficiencia del flujo de trabajo, mientras
 <!-- _class: blank -->
 <!-- _paginate: "" -->
 
-![bg fit](../images/dora-metrics.png)
+![bg fit](images/dora-metrics.png)
 
 ---
 
 <!-- _class: blank -->
 <!-- _paginate: "" -->
 
-![bg fit 90%](../images/dora-core-v2.0.0-summary.png)
+![bg fit 90%](images/dora-core-v2.0.0-summary.png)
 
 <!-- Quiero remarcar lo importante que es este resultado, recién en los últimos 5-10 años contamos con evidencia empírica de qué prácticas funcionan y cuáles no para desarrollar software. Si algo quiero que se lleven de esta clase, y que se lo cuenten a sus compañeros es que hay una serie de prácticas de ingeniería de software que tienen una base científica. No tienen que creer en DevOps porque lo dice un gurú, sino porque hay evidencia que demuestra que estas prácticas funcionan.
 -->
