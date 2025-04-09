@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
+      contents: write
       pages: write
     steps:
       - name: Checkout code
@@ -16,11 +17,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Marp Build
-        uses: docker://marpteam/marp-cli:latest
-        with:
-          args: --input-dir slides --output public
-        env:
-          MARP_USER: root:root
+        run: npx @marp-team/marp-cli@latest --input-dir slides --output public
       - name: Copy images
         run: |
           mkdir -p public/devops/images
